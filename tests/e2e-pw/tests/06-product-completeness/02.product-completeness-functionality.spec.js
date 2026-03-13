@@ -1,140 +1,101 @@
 const { test, expect } = require('../../utils/fixtures');
+
 test.describe('Verify the behvaiour of Product Completenss feature', () => {
-  test('Verify product grid shows NA for completeness when no required channel configured', async ({ adminPage }) => {
-    await adminPage.getByRole('link', { name: ' Catalog' }).click();
-    await adminPage.getByRole('button', { name: 'Create Product' }).click();
-    await adminPage.locator('input[name="type"]').locator('..').locator('.multiselect__tags').click();
-    await adminPage.getByRole('option', { name: 'Simple' }).locator('span').first().click();
-    await adminPage.locator('input[name="attribute_family_id"]').locator('..').locator('.multiselect__tags').click();
-    await adminPage.getByRole('option', { name: 'Default' }).locator('span').first().click();
-    await adminPage.locator('input[name="sku"]').click();
-    await adminPage.locator('input[name="sku"]').fill('NAScore');
-    await adminPage.getByRole('button', { name: 'Save Product' }).click();
-    await adminPage.getByRole('link', { name: ' Catalog' }).click();
-    const skuRow = adminPage.locator('div.row:has-text("NAScore")');
+  test('Verify product grid shows NA for completeness when no required channel configured', async ({ productPage }) => {
+    await productPage.create({
+      sku: 'NAScore',
+      type: 'Simple',
+      family: 'Default'
+    });
+    await productPage.goto();
+    const skuRow = productPage.page.locator('div.row:has-text("NAScore")');
     const completeColumn = skuRow.locator('span.label-info');
     await expect(completeColumn).toHaveText('N/A');
-});
-  test('Verify product edit adminPage shows no completeness score when no required channel configured', async ({ adminPage }) => {
-    await adminPage.getByRole('link', { name: ' Catalog' }).click();
-    await adminPage.getByText('NAScore').click();
-    await expect(adminPage).toHaveURL(/.*\/edit\/.*/);
-    await expect(adminPage.locator('text=Missing Required Attributes')).toHaveCount(0);
-    await expect(adminPage.locator('text=Completeness')).toHaveCount(0);
-});
+  });
 
-  test('Verify that attributes can be set as required from Completeness tab in default family', async ({ adminPage }) => {
-    await adminPage.getByRole('link', { name: ' Catalog' }).click();
-    await adminPage.getByRole('link', { name: 'Attribute Families' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).type('default');
-    await adminPage.keyboard.press('Enter');
-    const itemRow = adminPage.locator('div', { hasText: 'Default'});
-    await itemRow.locator('span[title="Edit"]').first().click();
-    await adminPage.getByRole('link', { name: 'Completeness' }).click();
-    await adminPage.getByRole('button', { name: '' }).click();
-    await adminPage.getByText('50', { exact: true }).first().click();
-    await expect(adminPage.getByText('16 Results')).toBeVisible();
-    await adminPage.locator(`input[name="channel_requirements"]`).locator('..').locator('.multiselect__tags').nth(10).click();
-    await adminPage.getByRole('option', { name: 'Default' }).locator('span').first().click();
-    await expect(adminPage.getByText('Completeness updated successfully Close').first()).toBeVisible();
-});
+  test('Verify product edit adminPage shows no completeness score when no required channel configured', async ({ productPage }) => {
+    await productPage.goto();
+    await productPage.page.getByText('NAScore').click();
+    await expect(productPage.page).toHaveURL(/.*\/edit\/.*/);
+    await expect(productPage.page.locator('text=Missing Required Attributes')).toHaveCount(0);
+    await expect(productPage.page.locator('text=Completeness')).toHaveCount(0);
+  });
 
-  test('Verify all available channels are displayed when user clicks “Configure Completeness” option', async ({ adminPage }) => {
-    await adminPage.getByRole('link', { name: ' Catalog' }).click();
-    await adminPage.getByRole('link', { name: 'Attribute Families' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).type('default');
-    await adminPage.keyboard.press('Enter');
-    const itemRow = adminPage.locator('div', { hasText: 'Default' });
-    await itemRow.locator('span[title="Edit"]').first().click();
-    await adminPage.getByRole('link', { name: 'Completeness' }).click();
-    await adminPage.locator('div').filter({ hasText: /^Code$/ }).locator('label span').click();
-    await adminPage.getByRole('button', { name: 'Select Action ' }).click();
-    await adminPage.getByRole('link', { name: 'Change Completeness' }).click();
-    await adminPage.locator('.px-4 > .mb-4 > div > .multiselect > .multiselect__tags').click();
-    await expect(adminPage.getByRole('option', { name: 'Default' }).locator('span').first()).toBeVisible();
-    await expect(adminPage.getByRole('option', { name: 'channel3' }).locator('span').first()).toBeVisible();
-});
+  test('Verify that attributes can be set as required from Completeness tab in default family', async ({ completenessPage }) => {
+    await completenessPage.gotoFamilyCompleteness('Default');
+    await completenessPage.setItemsPerPage(50);
+    await expect(completenessPage.page.getByText('16 Results')).toBeVisible();
 
-  test('Verify bulk selection of attributes for required channel updates product completeness visibility', async ({ adminPage }) => {
-    await adminPage.getByRole('link', { name: ' Catalog' }).click();
-    await adminPage.getByRole('link', { name: 'Attribute Families' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).type('default');
-    await adminPage.keyboard.press('Enter');
-    const itemRow = adminPage.locator('div', { hasText: 'Default'});
-    await itemRow.locator('span[title="Edit"]').first().click();
-    await adminPage.getByRole('link', { name: 'Completeness' }).click();
-    await adminPage.getByRole('button', { name: '' }).click();
-    await adminPage.getByText('50', { exact: true }).click();
-    await adminPage.click('label[for="mass_action_select_all_records"]');
-    await expect(adminPage.locator('#mass_action_select_all_records')).toBeChecked();
-    await adminPage.getByRole('button', { name: /Select Action/i }).click();
-    await adminPage.locator('a', { hasText: 'Change Completeness Requirement' }).click();
-    await adminPage.locator('.px-4 > .mb-4 > div > .multiselect > .multiselect__tags').click();
-    await adminPage.getByRole('option', { name: 'Default' }).locator('span').first().click();
-    await adminPage.getByRole('button', { name: 'Save' }).click();
-    await expect(adminPage.getByText('Completeness updated successfully Close')).toBeVisible();
-});
+    // Using nth(10) to match the original test's arbitrary selection
+    await completenessPage.page.locator(`input[name="channel_requirements"]`).locator('..').locator('.multiselect__tags').nth(10).click();
+    await completenessPage.page.getByRole('option', { name: 'Default' }).locator('span').first().click();
+    await expect(completenessPage.page.getByText('Completeness updated successfully Close').first()).toBeVisible();
+  });
 
-  test('Verify channel can be deselected for specific attribute in completeness settings', async ({ adminPage }) => {
-    await adminPage.getByRole('link', { name: ' Catalog' }).click();
-    await adminPage.getByRole('link', { name: 'Attribute Families' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).type('default');
-    await adminPage.keyboard.press('Enter');
-    const itemRow = adminPage.locator('div', { hasText: 'Default'});
-    await itemRow.locator('span[title="Edit"]').first().click();
-    await adminPage.getByRole('link', { name: 'Completeness' }).click();
-    await adminPage.getByRole('button', { name: '' }).click();
-    await adminPage.getByText('50', { exact: true }).click();
-    await adminPage.locator('.multiselect__tag-icon').first().click();
-    //await adminPage.locator('div:nth-child(14) > div:nth-child(3) > .mb-4 > div > .multiselect > .multiselect__tags > .multiselect__tags-wrap > .multiselect__tag > .multiselect__tag-icon').click();
-    await expect(adminPage.getByText('Completeness updated successfully Close').first()).toBeVisible();
-});
+  test('Verify all available channels are displayed when user clicks “Configure Completeness” option', async ({ completenessPage }) => {
+    await completenessPage.gotoFamilyCompleteness('Default');
+    await completenessPage.performMassAction('Change Completeness');
 
-  test('Update the sku by filling all missing required attribute', async ({ adminPage }) => {
-    await adminPage.getByRole('link', { name: ' Catalog' }).click();
-    await adminPage.getByRole('link', { name: 'Products' }).click();
-    const itemRow = adminPage.locator('div', { hasText: 'NAScore' });
-    await itemRow.locator('span[title="Edit"]').first().click();
-    await adminPage.locator('#product_number').click();
-    await adminPage.locator('#product_number').fill('123');
-    await adminPage.locator('input[name="values[channel_locale_specific][default][en_US][name]"]').fill('skusavedraft')
-    await adminPage.locator('input[name="values[common][url_key]"]').click();
-    await adminPage.locator('input[name="values[common][url_key]"]').type('skusavedraft');
-    const shortDescFrame = adminPage.frameLocator('#short_description_ifr');
-    await shortDescFrame.locator('body').click();
-    await shortDescFrame.locator('body').type('This is a short description', { delay: 100 });
-    const mainDescFrame = adminPage.frameLocator('#description_ifr');
-    await mainDescFrame.locator('body').click();
-    await mainDescFrame.locator('body').type('This is the full product description added by test.');
-    await adminPage.locator('input[name="values[channel_locale_specific][default][en_US][price][USD]"]').fill('300');
-    await adminPage.locator('#meta_title').click();
-    await adminPage.locator('#meta_title').fill('meattitle');
-    await adminPage.locator('#meta_keywords').click();
-    await adminPage.locator('#meta_keywords').fill('keyword');
-    await adminPage.locator('#meta_description').click();
-    await adminPage.locator('#meta_description').fill('description');
-    await adminPage.locator('#cost').click();
-    await adminPage.locator('#cost').fill('23');
-    await adminPage.getByRole('button', { name: 'Save Product' }).click();
-});
+    const multiselect = completenessPage.page.locator('.px-4 > .mb-4 > div > .multiselect > .multiselect__tags');
+    await multiselect.click();
+    await expect(completenessPage.page.getByRole('option', { name: 'Default' }).locator('span').first()).toBeVisible();
+    await expect(completenessPage.page.getByRole('option', { name: 'channel3' }).locator('span').first()).toBeVisible();
+  });
 
-  test('Verify configuring required attributes for different channels in Default Family Completeness settings', async ({ adminPage }) => {
-    await adminPage.getByRole('link', { name: ' Catalog' }).click();
-    await adminPage.getByRole('link', { name: 'Attribute Families' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).click();
-    await adminPage.getByRole('textbox', { name: 'Search' }).type('default');
-    await adminPage.keyboard.press('Enter');
-    const itemRow = adminPage.locator('div', { hasText: 'Default'});
-    await itemRow.locator('span[title="Edit"]').first().click();
-    await adminPage.getByRole('link', { name: 'Completeness' }).click();
-    await adminPage.getByRole('button', { name: '' }).click();
-    await adminPage.getByText('50', { exact: true }).click();
-    await adminPage.locator(`input[name="channel_requirements"]`).locator('..').locator('.multiselect__tags').first().click();
-    await adminPage.getByRole('option', { name: 'channel3' }).locator('span').first().click();
-    await expect(adminPage.getByText('Completeness updated successfully Close').first()).toBeVisible();
-});
+  test('Verify bulk selection of attributes for required channel updates product completeness visibility', async ({ completenessPage }) => {
+    await completenessPage.gotoFamilyCompleteness('Default');
+    await completenessPage.setItemsPerPage(50);
+
+    await completenessPage.selectAllRecords();
+    await completenessPage.page.getByRole('button', { name: /Select Action/i }).click();
+    await completenessPage.page.locator('a', { hasText: 'Change Completeness Requirement' }).click();
+
+    const multiselect = completenessPage.page.locator('.px-4 > .mb-4 > div > .multiselect > .multiselect__tags');
+    await multiselect.click();
+    await completenessPage.page.getByRole('option', { name: 'Default' }).locator('span').first().click();
+    await completenessPage.page.getByRole('button', { name: 'Save' }).click();
+    await expect(completenessPage.page.getByText('Completeness updated successfully Close')).toBeVisible();
+  });
+
+  test('Verify channel can be deselected for specific attribute in completeness settings', async ({ completenessPage }) => {
+    await completenessPage.gotoFamilyCompleteness('Default');
+    await completenessPage.setItemsPerPage(50);
+
+    // Deselect first tag
+    await completenessPage.page.locator('.multiselect__tag-icon').first().click();
+    await expect(completenessPage.page.getByText('Completeness updated successfully Close').first()).toBeVisible();
+  });
+
+  test('Update the sku by filling all missing required attribute', async ({ productPage }) => {
+    await productPage.goto();
+    await productPage.clickEditForRow('NAScore');
+
+    await productPage.page.locator('#product_number').fill('123');
+    await productPage.page.locator('input[name="values[channel_locale_specific][default][en_US][name]"]').fill('skusavedraft');
+    await productPage.page.locator('input[name="values[common][url_key]"]').fill('skusavedraft');
+
+    const shortDescFrame = productPage.page.frameLocator('#short_description_ifr');
+    await shortDescFrame.locator('body').fill('This is a short description');
+
+    const mainDescFrame = productPage.page.frameLocator('#description_ifr');
+    await mainDescFrame.locator('body').fill('This is the full product description added by test.');
+
+    await productPage.page.locator('input[name="values[channel_locale_specific][default][en_US][price][USD]"]').fill('300');
+    await productPage.page.locator('#meta_title').fill('meattitle');
+    await productPage.page.locator('#meta_keywords').fill('keyword');
+    await productPage.page.locator('#meta_description').fill('description');
+    await productPage.page.locator('#cost').fill('23');
+
+    await productPage.save();
+  });
+
+  test('Verify configuring required attributes for different channels in Default Family Completeness settings', async ({ completenessPage }) => {
+    await completenessPage.gotoFamilyCompleteness('Default');
+    await completenessPage.setItemsPerPage(50);
+
+    // Set for channel3
+    await completenessPage.page.locator(`input[name="channel_requirements"]`).locator('..').locator('.multiselect__tags').first().click();
+    await completenessPage.page.getByRole('option', { name: 'channel3' }).locator('span').first().click();
+    await expect(completenessPage.page.getByText('Completeness updated successfully Close').first()).toBeVisible();
+  });
 });
