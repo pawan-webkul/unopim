@@ -55,6 +55,7 @@ jobs:
       ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
       INVALID_ADMIN_EMAIL: ${{ secrets.INVALID_ADMIN_EMAIL }}
       INVALID_ADMIN_PASSWORD: ${{ secrets.INVALID_ADMIN_PASSWORD }}
+      PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
       # E2E only: lets webhook-delivery.spec.js point UnoPim at a localhost
       # catcher (127.0.0.1:<port>). SafeWebhookUrl blocks loopback by default
       # in prod; this flag re-allows loopback ONLY — private / link-local /
@@ -155,7 +156,11 @@ jobs:
           PASSPORT_E2E_LOCAL: '1'
         run: |
           cd tests/e2e-pw
-          npx playwright test --reporter=list,html --shard=${{ matrix.shard-index }}/${{ matrix.shard-total }}
+          if [ -n "$PERCY_TOKEN" ]; then
+            npx percy exec -- npx playwright test --reporter=list,html --shard=${{ matrix.shard-index }}/${{ matrix.shard-total }}
+          else
+            npx playwright test --reporter=list,html --shard=${{ matrix.shard-index }}/${{ matrix.shard-total }}
+          fi
 
       - name: Upload test results
         if: failure()

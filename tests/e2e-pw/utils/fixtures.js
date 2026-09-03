@@ -93,6 +93,13 @@ exports.test = base.test.extend({
     const { randomBytes } = require('crypto');
     await use(Date.now().toString(36) + randomBytes(4).toString('hex'));
   },
+
+  /** Percy visual snapshot helper — no-op when PERCY_TOKEN is not set */
+  percySnapshot: async ({}, use) => {
+    const { percySnapshot } = require('./percy');
+    await use(percySnapshot);
+  },
 });
 
 exports.expect = base.expect;
+exports.percySnapshot = require('./percy').percySnapshot;

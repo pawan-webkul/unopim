@@ -266,6 +266,122 @@ First boot installs Composer dependencies into `./vendor`. The stack defaults to
   </a>
 </p>
 
+## 🧪 Testing
+
+### Playwright E2E Tests
+
+The Playwright automation suite lives under `tests/e2e-pw/`. It uses a shared admin `storageState` for authentication and runs across 8 parallel shards in CI.
+
+```bash
+cd tests/e2e-pw
+npm install
+npx playwright test
+```
+
+Run a specific test file:
+
+```bash
+npx playwright test tests/03-dashboard/navigation.spec.js
+```
+
+Run with a specific worker count:
+
+```bash
+npx playwright test --workers=4
+```
+
+#### Page Object Model
+
+Tests use dedicated page objects under `tests/e2e-pw/pages/` to encapsulate locators and page-specific actions. This keeps tests readable and maintainable.
+
+Available page objects:
+
+| Page Object | Section | Key Actions |
+|-------------|---------|-------------|
+| `DashboardPage` | Navigation | `navigateTo()`, `openProducts()`, `openCategories()`, `openAttributes()`, `openSettings()` |
+| `LoginPage` | Auth | `login(email, password)` |
+| `ProductPage` | Catalog | `openListing()`, `openCreateForm()`, `createSimpleProduct(sku)`, `searchBySku()`, `deleteBySku()` |
+| `CategoryPage` | Catalog | `openListing()`, `openCreateForm()`, `createCategory()`, `searchByCode()`, `deleteByCode()` |
+| `AttributePage` | Catalog | `openListing()`, `openCreateForm()`, `createAttribute()`, `searchByCode()`, `deleteByCode()` |
+| `AttributeFamilyPage` | Catalog | `openListing()`, `openCreateForm()`, `searchByCode()` |
+| `AttributeGroupPage` | Catalog | `openListing()`, `openCreateForm()`, `searchByCode()` |
+| `CategoryFieldPage` | Catalog | `openListing()`, `openCreateForm()`, `searchByCode()` |
+| `MeasurementPage` | Catalog | `openListing()`, `openCreateForm()`, `searchByCode()` |
+| `AssociationTypePage` | Catalog | `openListing()`, `openCreateForm()`, `searchByCode()` |
+| `ChannelPage` | Settings | `openListing()`, `openCreateForm()`, `searchByCode()` |
+| `CurrencyPage` | Settings | `openListing()`, `openCreateForm()`, `searchByCode()` |
+| `LocalePage` | Settings | `openListing()`, `openCreateForm()`, `searchByCode()` |
+| `RolePage` | Settings | `openListing()`, `openCreateForm()`, `searchByCode()` |
+| `UserPage` | Settings | `openListing()`, `openCreateForm()`, `searchByEmail()` |
+| `IntegrationPage` | Configuration | `openListing()`, `openCreateForm()`, `searchByName()` |
+| `WebhookPage` | Configuration | `openListing()`, `openCreateForm()`, `searchByName()` |
+| `MagicAIPage` | Configuration | `openPlatforms()`, `openPrompts()`, `openSettings()` |
+| `ExportPage` | Data Transfer | `openListing()`, `openCreateForm()`, `searchByName()` |
+| `ImportPage` | Data Transfer | `openListing()`, `openCreateForm()`, `searchByName()` |
+| `JobTrackerPage` | Data Transfer | `open()` |
+| `NotificationPage` | Dashboard | `openListing()` |
+| `MyAccountPage` | Settings | `open()` |
+
+Usage:
+
+```javascript
+const { test, expect } = require('../../utils/fixtures');
+const { ProductPage } = require('../../pages');
+
+test('Create and delete a product', async ({ adminPage }) => {
+  const productPage = new ProductPage(adminPage);
+  const sku = `TEST-${Date.now()}`;
+  await productPage.createSimpleProduct(sku);
+  await productPage.deleteBySku(sku);
+});
+```
+
+### Percy Visual Regression Testing
+
+Percy is integrated for visual regression testing. It is **optional** — functional tests run normally without a Percy token.
+
+**Local functional testing (no Percy):**
+
+```bash
+cd tests/e2e-pw
+npx playwright test
+```
+
+**Local Percy testing:**
+
+```bash
+cd tests/e2e-pw
+export PERCY_TOKEN=<your-token>
+npx percy exec -- npx playwright test
+```
+
+Or via npm script:
+
+```bash
+cd tests/e2e-pw
+PERCY_TOKEN=<your-token> npm run test:percy
+```
+
+**GitHub Actions:**
+
+Percy runs automatically in CI when the `PERCY_TOKEN` secret is configured. Each Playwright shard (`1/8` through `8/8`) runs independently with Percy enabled. View visual diffs in the Percy dashboard linked from the workflow summary.
+
+**Adding Percy snapshots:**
+
+Import `percySnapshot` alongside `test` and `expect`:
+
+```javascript
+const { test, expect, percySnapshot } = require('../../utils/fixtures');
+
+test('Product listing is stable', async ({ adminPage }) => {
+  await navigateTo(adminPage, 'products');
+  await adminPage.waitForLoadState('networkidle');
+  await percySnapshot(adminPage, 'Product Listing');
+});
+```
+
+`percySnapshot` is a no-op when `PERCY_TOKEN` is not set, so it is safe to add to any test without affecting local functional runs.
+
 ## 🤝 Contributing
 
 Found a bug or want to add a feature? Open an issue or submit a pull request — see [CONTRIBUTING.md](.github/CONTRIBUTING.md) for the full flow.

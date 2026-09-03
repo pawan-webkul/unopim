@@ -14,6 +14,7 @@ const ROUTES = {
   attributeGroups:   '/admin/catalog/attribute-groups',
   attributeFamilies: '/admin/catalog/attribute-families',
   associationTypes:  '/admin/catalog/association-types',
+  measurements:      '/admin/catalog/measurements',
   channels:          '/admin/settings/channels',
   currencies:        '/admin/settings/currencies',
   locales:           '/admin/settings/locales',

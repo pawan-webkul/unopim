@@ -18,6 +18,7 @@
     "test:api:media": "npx playwright test tests/api/15-media-upload",
     "test:api:ci": "CI=1 npx playwright test tests/api --reporter=list,html,junit",
     "test:api:debug": "DEBUG=pw:api npx playwright test tests/api --workers=1",
+    "test:percy": "PERCY_TOKEN=$PERCY_TOKEN npx percy exec -- npx playwright test",
     "report": "npx playwright show-report"
   },
   "keywords": [],
@@ -25,6 +26,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@percy/cli": "^1.32.7",
+    "@percy/playwright": "^1.1.2",
     "@playwright/test": "1.62.1",
     "@types/node": "^25.9.1",
     "ajv": "^8.17.1",
