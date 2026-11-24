@@ -1,0 +1,2739 @@
+[
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin",
+  "name": "generated::XfCBVNDS9GBqzGzz",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/account",
+  "name": "admin.account.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/account",
+  "name": "admin.account.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/acl-version",
+  "name": "admin.acl.version",
+  "public": true
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/agents",
+  "name": "ai-agent.agents.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/agents",
+  "name": "ai-agent.agents.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/agents/create",
+  "name": "ai-agent.agents.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/agents/get",
+  "name": "ai-agent.agents.get",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/ai-agent/agents/{id}",
+  "name": "ai-agent.agents.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/ai-agent/agents/{id}",
+  "name": "ai-agent.agents.destroy",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/agents/{id}/edit",
+  "name": "ai-agent.agents.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/chat",
+  "name": "ai-agent.chat.send",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/chat/magic-ai-config",
+  "name": "ai-agent.chat.magic-ai-config",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/chat/rate",
+  "name": "ai-agent.chat.rate",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/chat/reply/{id}",
+  "name": "ai-agent.chat.reply",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/chat/reply/{id}/cancel",
+  "name": "ai-agent.chat.reply.cancel",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/chat/send-async",
+  "name": "ai-agent.chat.send-async",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/chat/stream",
+  "name": "ai-agent.chat.stream",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/conversations",
+  "name": "ai-agent.conversations.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/conversations",
+  "name": "ai-agent.conversations.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/conversations/{id}",
+  "name": "ai-agent.conversations.show",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/ai-agent/conversations/{id}",
+  "name": "ai-agent.conversations.destroy",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/dashboard/analytics",
+  "name": "ai-agent.dashboard.analytics",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/dashboard/audit-trail",
+  "name": "ai-agent.dashboard.audit-trail",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/dashboard/notifications",
+  "name": "ai-agent.dashboard.notifications",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/dashboard/notifications/{id}/dismiss",
+  "name": "ai-agent.dashboard.notifications.dismiss",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/dashboard/rollback/{id}",
+  "name": "ai-agent.dashboard.rollback",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/execute",
+  "name": "ai-agent.execute",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/exports/{file}",
+  "name": "ai-agent.exports.download",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/generate",
+  "name": "ai-agent.generate.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/ai-agent/generate",
+  "name": "ai-agent.generate.process",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/ai-agent/settings",
+  "name": "ai-agent.settings",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/avatar/u/{hash}",
+  "name": "admin.avatar.public",
+  "public": true
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/ajax-options/fetch-options",
+  "name": "admin.catalog.options.fetch-all",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/association-types",
+  "name": "admin.catalog.association_types.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/association-types/create",
+  "name": "admin.catalog.association_types.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/association-types/edit/{id}",
+  "name": "admin.catalog.association_types.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/association-types/edit/{id}",
+  "name": "admin.catalog.association_types.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/association-types/mass-delete",
+  "name": "admin.catalog.association_types.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/association-types/mass-update",
+  "name": "admin.catalog.association_types.mass_update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/association-types/search",
+  "name": "admin.catalog.association_types.search",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/association-types/{id}",
+  "name": "admin.catalog.association_types.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attribute-families",
+  "name": "admin.catalog.families.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/attribute-families/create",
+  "name": "admin.catalog.families.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attribute-families/edit/{id}",
+  "name": "admin.catalog.families.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/attribute-families/edit/{id}",
+  "name": "admin.catalog.families.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/attribute-families/edit/{id}",
+  "name": "admin.catalog.families.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attribute-families/edit/{id}/groups",
+  "name": "admin.catalog.families.groups",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attribute-families/edit/{id}/groups/{groupId}/attributes",
+  "name": "admin.catalog.families.group-attributes",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attribute-families/edit/{id}/variant-structures",
+  "name": "admin.catalog.families.variant-structures.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/attribute-families/edit/{id}/variant-structures",
+  "name": "admin.catalog.families.variant-structures.save",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/attribute-families/edit/{id}/variant-structures/{structureId}",
+  "name": "admin.catalog.families.variant-structures.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attribute-families/edit/{id}/variant-structures/{structureId}/edit",
+  "name": "admin.catalog.families.variant-structures.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attribute-groups",
+  "name": "admin.catalog.attribute.groups.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attribute-groups/create",
+  "name": "admin.catalog.attribute.groups.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/attribute-groups/create",
+  "name": "admin.catalog.attribute.groups.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attribute-groups/edit/{id}",
+  "name": "admin.catalog.attribute.groups.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/attribute-groups/edit/{id}",
+  "name": "admin.catalog.attribute.groups.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/attribute-groups/edit/{id}",
+  "name": "admin.catalog.attribute.groups.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/attribute-groups/quick-store",
+  "name": "admin.catalog.attribute.groups.quick-store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attributes",
+  "name": "admin.catalog.attributes.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attributes/create",
+  "name": "admin.catalog.attributes.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/attributes/create",
+  "name": "admin.catalog.attributes.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attributes/edit/{id}",
+  "name": "admin.catalog.attributes.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/attributes/edit/{id}",
+  "name": "admin.catalog.attributes.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/attributes/edit/{id}",
+  "name": "admin.catalog.attributes.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/attributes/mass-delete",
+  "name": "admin.catalog.attributes.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attributes/{attribute_id}/options",
+  "name": "admin.catalog.attributes.options.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/attributes/{attribute_id}/options/create",
+  "name": "admin.catalog.attributes.options.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/attributes/{attribute_id}/options/delete/{id}",
+  "name": "admin.catalog.attributes.options.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/attributes/{attribute_id}/options/edit/{id}",
+  "name": "admin.catalog.attributes.options.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/attributes/{attribute_id}/options/edit/{id}",
+  "name": "admin.catalog.attributes.options.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/attributes/{attribute_id}/options/update-sort",
+  "name": "admin.catalog.attributes.options.update_sort",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/categories",
+  "name": "admin.catalog.categories.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/categories/children-tree",
+  "name": "admin.catalog.categories.children.tree",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/categories/create",
+  "name": "admin.catalog.categories.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/categories/create",
+  "name": "admin.catalog.categories.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/categories/descendants",
+  "name": "admin.catalog.categories.descendants",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/categories/edit/{id}",
+  "name": "admin.catalog.categories.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/categories/edit/{id}",
+  "name": "admin.catalog.categories.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/categories/edit/{id}",
+  "name": "admin.catalog.categories.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/categories/mass-delete",
+  "name": "admin.catalog.categories.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/categories/search",
+  "name": "admin.catalog.categories.search",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/categories/tree",
+  "name": "admin.catalog.categories.tree",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/category-fields",
+  "name": "admin.catalog.category_fields.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/category-fields/create",
+  "name": "admin.catalog.category_fields.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/category-fields/create",
+  "name": "admin.catalog.category_fields.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/category-fields/edit/{id}",
+  "name": "admin.catalog.category_fields.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/category-fields/edit/{id}",
+  "name": "admin.catalog.category_fields.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/category-fields/edit/{id}",
+  "name": "admin.catalog.category_fields.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/category-fields/mass-delete",
+  "name": "admin.catalog.category_fields.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/category-fields/mass-update",
+  "name": "admin.catalog.category_fields.mass_update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/category-fields/{id}/options",
+  "name": "admin.catalog.category_fields.options",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/passports",
+  "name": "admin.catalog.passports.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/passports/bulk-publish",
+  "name": "admin.catalog.passports.bulk-publish",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/passports/mass-publish",
+  "name": "admin.catalog.passports.mass_publish",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/passports/mass-transition",
+  "name": "admin.catalog.passports.mass_transition",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/passports/publish-attempts/{attempt}",
+  "name": "admin.catalog.passports.publish_attempt",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/passports/publish/{product}",
+  "name": "admin.catalog.passports.publish",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/passports/reinstate/{publication}",
+  "name": "admin.catalog.passports.reinstate",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/passports/templates",
+  "name": "admin.catalog.passports.templates.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/passports/templates",
+  "name": "admin.catalog.passports.templates.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/passports/templates/{id}",
+  "name": "admin.catalog.passports.templates.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/passports/templates/{id}",
+  "name": "admin.catalog.passports.templates.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/passports/templates/{id}/edit",
+  "name": "admin.catalog.passports.templates.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/passports/withdraw/{publication}",
+  "name": "admin.catalog.passports.withdraw",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/passports/{publication}/versions",
+  "name": "admin.catalog.passports.versions",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/passports/{publication}/versions/republish",
+  "name": "admin.catalog.passports.republish",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products",
+  "name": "admin.catalog.products.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/bulkedit",
+  "name": "admin.catalog.products.bulkedit",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/bulkedit/fetch-attributes",
+  "name": "admin.catalog.bulkedit.attributes.fetch-all",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/bulkedit/filters",
+  "name": "admin.catalog.products.bulkedit.filters",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/bulkedit/save",
+  "name": "admin.catalog.products.bulk-edit.save",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/bulkedit/save-media",
+  "name": "admin.catalog.products.bulk-edit.save-media",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/check-variant",
+  "name": "admin.catalog.products.check-variant",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/copy/{id}",
+  "name": "admin.catalog.products.copy",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/create",
+  "name": "admin.catalog.products.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/edit/{id}",
+  "name": "admin.catalog.products.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/catalog/products/edit/{id}",
+  "name": "admin.catalog.products.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/products/edit/{id}",
+  "name": "admin.catalog.products.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/edit/{id}/attribute-groups",
+  "name": "admin.catalog.products.attribute_groups",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/edit/{id}/attribute-groups/{groupId}/fields",
+  "name": "admin.catalog.products.attribute_group_fields",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/edit/{id}/completeness",
+  "name": "admin.catalog.products.completeness",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/edit/{id}/templates/preview",
+  "name": "admin.catalog.products.template_preview",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/edit/{id}/templates/suggestions",
+  "name": "admin.catalog.products.template_suggestions",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/filterable-attributes",
+  "name": "admin.catalog.products.filterable_attributes",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/get/attributes",
+  "name": "admin.catalog.product.get_attribute",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/get/locale",
+  "name": "admin.catalog.product.get_locale",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/grid-views",
+  "name": "admin.catalog.products.grid_views.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/grid-views",
+  "name": "admin.catalog.products.grid_views.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/catalog/products/grid-views/{id}",
+  "name": "admin.catalog.products.grid_views.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/mass-delete",
+  "name": "admin.catalog.products.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/mass-update",
+  "name": "admin.catalog.products.mass_update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET",
+   "POST"
+  ],
+  "uri": "admin/catalog/products/quick-export",
+  "name": "admin.catalog.products.quick-export",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/quick-export/download/{file}",
+  "name": "admin.catalog.products.quick-export.download",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/quick-export/queue",
+  "name": "admin.catalog.products.quick-export.queue",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/search",
+  "name": "admin.catalog.products.search",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/products/{configurableId}/variant-children",
+  "name": "admin.catalog.products.variant_children",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/catalog/products/{configurableId}/variant-node",
+  "name": "admin.catalog.products.variant_node.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/catalog/sync",
+  "name": "admin.catalog.products.sync",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/completeness-settings/mass-update",
+  "name": "admin.catalog.families.completeness.mass_update",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/completeness-settings/update",
+  "name": "admin.catalog.families.completeness.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/completeness-settings/{family_id}/edit",
+  "name": "admin.catalog.families.completeness.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/completeness/dashboard/channel-stats",
+  "name": "admin.dashboard.completeness.data",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/general/magic_ai",
+  "name": "generated::Yd8nu5AyUlyigANK",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/integrations",
+  "name": "admin.configuration.integrations.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/integrations/create",
+  "name": "admin.configuration.integrations.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/configuration/integrations/create",
+  "name": "admin.configuration.integrations.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/integrations/edit/{id}",
+  "name": "admin.configuration.integrations.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/configuration/integrations/edit/{id}",
+  "name": "admin.configuration.integrations.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/configuration/integrations/edit/{id}",
+  "name": "admin.configuration.integrations.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/configuration/integrations/generate",
+  "name": "admin.configuration.integrations.generate_key",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/configuration/integrations/re-generate-password",
+  "name": "admin.configuration.integrations.re_generate_password",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/configuration/integrations/re-generate-secrete",
+  "name": "admin.configuration.integrations.re_generate_secret_key",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/search",
+  "name": "admin.configuration.search",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/system-information",
+  "name": "admin.configuration.system.information",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/system-settings",
+  "name": "admin.settings.system.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/configuration/system-settings/{key}",
+  "name": "admin.settings.system.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/system/system.appearance",
+  "name": "admin.settings.appearance.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/configuration/system/system.appearance",
+  "name": "admin.settings.appearance.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/system/{key}",
+  "name": "admin.settings.system.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/webhook",
+  "name": "webhook.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/configuration/webhook/create",
+  "name": "webhook.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/configuration/webhook/delete/{id}",
+  "name": "webhook.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/webhook/edit/{id}",
+  "name": "webhook.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/configuration/webhook/edit/{id}",
+  "name": "webhook.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/webhook/logs",
+  "name": "webhook.logs.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/configuration/webhook/logs/delete/{id}",
+  "name": "webhook.logs.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/configuration/webhook/logs/mass-delete",
+  "name": "webhook.logs.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/webhook/logs/show/{id}",
+  "name": "webhook.logs.show",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/webhook/logs/webhook/{id}",
+  "name": "webhook.logs.for-webhook",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/configuration/webhook/mass-delete",
+  "name": "webhook.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/configuration/webhook/test",
+  "name": "webhook.test",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/{slug?}/{slug2?}",
+  "name": "admin.configuration.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/configuration/{slug?}/{slug2?}",
+  "name": "admin.configuration.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/configuration/{slug?}/{slug2?}/{path}",
+  "name": "admin.configuration.download",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/dashboard",
+  "name": "admin.dashboard.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/dashboard/stats",
+  "name": "admin.dashboard.stats",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports",
+  "name": "admin.settings.data_transfer.exports.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/create",
+  "name": "admin.settings.data_transfer.exports.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/exports/create",
+  "name": "admin.settings.data_transfer.exports.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/data-transfer/exports/destroy/{id}",
+  "name": "admin.settings.data_transfer.exports.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/download-error-report/{id}",
+  "name": "admin.settings.data_transfer.exports.download_error_report",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/download-sample-images-zip/{type?}/{key?}",
+  "name": "admin.settings.data_transfer.exports.download_sample_zip",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/download-sample/{type?}/{key?}",
+  "name": "admin.settings.data_transfer.exports.download_sample",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/download/{id}",
+  "name": "admin.settings.data_transfer.exports.download",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/edit/{id}",
+  "name": "admin.settings.data_transfer.exports.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/data-transfer/exports/edit/{id}",
+  "name": "admin.settings.data_transfer.exports.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/data-transfer/exports/export-now/{id}",
+  "name": "admin.settings.data_transfer.exports.export_now",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/export/{id}",
+  "name": "admin.settings.data_transfer.exports.export-view",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/filters/attribute-families",
+  "name": "admin.settings.data_transfer.exports.filters.attribute_families",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/filters/attributes",
+  "name": "admin.settings.data_transfer.exports.filters.attributes",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/filters/categories",
+  "name": "admin.settings.data_transfer.exports.filters.categories",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/filters/channels",
+  "name": "admin.settings.data_transfer.exports.filters.channels",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/filters/currencies",
+  "name": "admin.settings.data_transfer.exports.filters.currencies",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/filters/locales",
+  "name": "admin.settings.data_transfer.exports.filters.locales",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/exports/index/{id}",
+  "name": "admin.settings.data_transfer.exports.index_data",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/exports/link/{id}",
+  "name": "admin.settings.data_transfer.exports.link",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/exports/start/{id}",
+  "name": "admin.settings.data_transfer.exports.start",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/exports/stats/{id}/{state?}",
+  "name": "admin.settings.data_transfer.exports.stats",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/exports/validate/{id}",
+  "name": "admin.settings.data_transfer.exports.validate",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/imports",
+  "name": "admin.settings.data_transfer.imports.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/imports/cancel/{id}",
+  "name": "admin.settings.data_transfer.imports.cancel",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/imports/create",
+  "name": "admin.settings.data_transfer.imports.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/imports/create",
+  "name": "admin.settings.data_transfer.imports.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/data-transfer/imports/destroy/{id}",
+  "name": "admin.settings.data_transfer.imports.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/imports/download-error-report/{id}",
+  "name": "admin.settings.data_transfer.imports.download_error_report",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/imports/download-sample-images-zip/{type?}/{key?}",
+  "name": "admin.settings.data_transfer.imports.download_sample_zip",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/imports/download-sample/{type?}/{key?}",
+  "name": "admin.settings.data_transfer.imports.download_sample",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/imports/download/{id}",
+  "name": "admin.settings.data_transfer.imports.download",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/imports/edit/{id}",
+  "name": "admin.settings.data_transfer.imports.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/data-transfer/imports/edit/{id}",
+  "name": "admin.settings.data_transfer.imports.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/data-transfer/imports/import-now/{id}",
+  "name": "admin.settings.data_transfer.imports.import_now",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/imports/import/{id}",
+  "name": "admin.settings.data_transfer.imports.import-view",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/imports/index/{id}",
+  "name": "admin.settings.data_transfer.imports.index_data",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/imports/link/{id}",
+  "name": "admin.settings.data_transfer.imports.link",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/imports/pause/{id}",
+  "name": "admin.settings.data_transfer.imports.pause",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/imports/resume/{id}",
+  "name": "admin.settings.data_transfer.imports.resume",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/imports/start/{id}",
+  "name": "admin.settings.data_transfer.imports.start",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/imports/stats/{id}/{state?}",
+  "name": "admin.settings.data_transfer.imports.stats",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/imports/upload-images-zip",
+  "name": "admin.settings.data_transfer.imports.upload_images_zip",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/imports/validate/{id}",
+  "name": "admin.settings.data_transfer.imports.validate",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/job-tracker",
+  "name": "admin.settings.data_transfer.tracker.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/job-tracker/track/archive/download/{batch_id}",
+  "name": "admin.settings.data_transfer.tracker.archive.download",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/job-tracker/track/download-log/{track_id}",
+  "name": "admin.settings.data_transfer.tracker.log.download",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/job-tracker/track/download/{batch_id}",
+  "name": "admin.settings.data_transfer.tracker.download",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/job-tracker/track/{batch_id}",
+  "name": "admin.settings.data_transfer.tracker.view",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/jobs/cancel/{id}",
+  "name": "admin.settings.data_transfer.jobs.cancel",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/jobs/pause/{id}",
+  "name": "admin.settings.data_transfer.jobs.pause",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/data-transfer/jobs/resume/{id}",
+  "name": "admin.settings.data_transfer.jobs.resume",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/data-transfer/jobs/stats/{id}/{state?}",
+  "name": "admin.settings.data_transfer.jobs.stats",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/datagrid/available-columns",
+  "name": "admin.datagrid.available_columns",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/datagrid/look-up",
+  "name": "admin.datagrid.look_up",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/forget-password",
+  "name": "admin.forget_password.create",
+  "public": true
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/forget-password",
+  "name": "admin.forget_password.store",
+  "public": true
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/get-notifications",
+  "name": "admin.notification.get_notification",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/help",
+  "name": "admin.help.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/help/promo/dismiss",
+  "name": "admin.help.promo.dismiss",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/history/view-version/{entity}/{id}/{versionId}",
+  "name": "admin.history.version.view",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/history/view-version/{entity}/{id}/{versionId}",
+  "name": "admin.history.version.restore",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/history/view-version/{entity}/{id}/{versionId}",
+  "name": "admin.history.version.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/history/view/{entity}/{id}",
+  "name": "admin.history.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/history/view/{entity}/{id}/{historyId}",
+  "name": "admin.history.view",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/login",
+  "name": "admin.session.create",
+  "public": true
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/login",
+  "name": "admin.session.store",
+  "public": true
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/login/sso/{provider}",
+  "name": "admin.session.sso.redirect",
+  "public": true
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/login/sso/{provider}/callback",
+  "name": "admin.session.sso.callback",
+  "public": true
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/logout",
+  "name": "admin.session.destroy",
+  "public": true
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/available-model",
+  "name": "admin.magic_ai.available_model",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/channel-locales",
+  "name": "admin.magic_ai.channel_locales",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/check/is-all-attribute-translatable",
+  "name": "admin.magic_ai.check.is_all_attribute_translatable",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/check/isTranslatable",
+  "name": "admin.magic_ai.check.is_translatable",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/content",
+  "name": "admin.magic_ai.content",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/create-prompt",
+  "name": "admin.magic_ai.prompt.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/default-prompt",
+  "name": "admin.magic_ai.default_prompt",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/magic-ai/delete/{id}",
+  "name": "admin.magic_ai.prompt.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/magic-ai/edit",
+  "name": "admin.magic_ai.prompt.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/edit/{id}",
+  "name": "admin.magic_ai.prompt.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/image",
+  "name": "admin.magic_ai.image",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/model",
+  "name": "admin.magic_ai.model",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/platform-options",
+  "name": "admin.magic_ai.platforms",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/platforms",
+  "name": "admin.magic_ai.platform.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/platforms",
+  "name": "admin.magic_ai.platform.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/platforms/fetch-models",
+  "name": "admin.magic_ai.platform.fetch_models",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/platforms/test-connection",
+  "name": "admin.magic_ai.platform.test",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/platforms/{id}",
+  "name": "admin.magic_ai.platform.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/magic-ai/platforms/{id}",
+  "name": "admin.magic_ai.platform.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/magic-ai/platforms/{id}",
+  "name": "admin.magic_ai.platform.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/platforms/{id}/default",
+  "name": "admin.magic_ai.platform.set_default",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/prompts",
+  "name": "admin.magic_ai.prompt.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/save/translated-attributes",
+  "name": "admin.magic_ai.store.translated.all_attribute",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/save/translatedData",
+  "name": "admin.magic_ai.store.translated",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/settings",
+  "name": "admin.magic_ai.settings.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/settings",
+  "name": "admin.magic_ai.settings.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/suggestion-values",
+  "name": "admin.magic_ai.suggestion_values",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/system-prompts",
+  "name": "admin.magic_ai.system_prompt.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/system-prompts/create-system-prompt",
+  "name": "admin.magic_ai.system_prompt.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/magic-ai/system-prompts/delete/{id}",
+  "name": "admin.magic_ai.system_prompt.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/magic-ai/system-prompts/edit",
+  "name": "admin.magic_ai.system_prompt.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/system-prompts/edit/{id}",
+  "name": "admin.magic_ai.system_prompt.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/translate",
+  "name": "admin.magic_ai.translate",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/magic-ai/translate/all/attribute",
+  "name": "admin.magic_ai.translate.all.attribute",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/magic-ai/validate-credential",
+  "name": "admin.magic_ai.validate_credential",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/measurement/attribute-units",
+  "name": "admin.measurement.attribute.units",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/measurement/families",
+  "name": "admin.measurement.families.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/measurement/families",
+  "name": "admin.measurement.families.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/measurement/families/mass-delete",
+  "name": "admin.measurement.families.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/measurement/families/{id}",
+  "name": "admin.measurement.families.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/measurement/families/{id}",
+  "name": "admin.measurement.families.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/measurement/families/{id}/edit",
+  "name": "admin.measurement.families.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/measurement/family-units",
+  "name": "admin.measurement.family.units",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/measurement/measurement-families/{familyId}/units/{code}",
+  "name": "admin.measurement.families.units.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/measurement/measurement-families/{familyId}/units/{code}/edit",
+  "name": "admin.measurement.families.units.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/measurement/measurement-families/{familyId}/units/{code}/update",
+  "name": "admin.measurement.families.units.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/measurement/measurement-families/{id}/units",
+  "name": "admin.measurement.families.units",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/measurement/measurement-families/{id}/units",
+  "name": "admin.measurement.families.units.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/measurement/measurement/attribute/{attributeId}",
+  "name": "measurement.attribute",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/media/download",
+  "name": "admin.media.download",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/media/preview",
+  "name": "admin.media.preview",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/media/scan",
+  "name": "admin.media.scan",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/notifications",
+  "name": "admin.notification.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/products/{product}/passport",
+  "name": "admin.catalog.products.passport.show",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/products/{product}/passport/preview",
+  "name": "admin.catalog.products.passport.preview",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/read-all-notifications",
+  "name": "admin.notification.read_all",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/reset-password",
+  "name": "generated::fM0kFnqIGEAZ8qBp",
+  "public": true
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/reset-password",
+  "name": "admin.reset_password.store",
+  "public": true
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/reset-password/{token}",
+  "name": "admin.reset_password.create",
+  "public": true
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/channels",
+  "name": "admin.settings.channels.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/channels/create",
+  "name": "admin.settings.channels.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/settings/channels/create",
+  "name": "admin.settings.channels.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/channels/edit/{id}",
+  "name": "admin.settings.channels.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/settings/channels/edit/{id}",
+  "name": "admin.settings.channels.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/settings/channels/edit/{id}",
+  "name": "admin.settings.channels.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/currencies",
+  "name": "admin.settings.currencies.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/settings/currencies/create",
+  "name": "admin.settings.currencies.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/settings/currencies/edit",
+  "name": "admin.settings.currencies.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/currencies/edit/{id}",
+  "name": "admin.settings.currencies.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/settings/currencies/edit/{id}",
+  "name": "admin.settings.currencies.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/settings/currencies/mass-delete",
+  "name": "admin.settings.currencies.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/settings/currencies/mass-edit",
+  "name": "admin.settings.currencies.mass_update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/locales",
+  "name": "admin.settings.locales.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/settings/locales/create",
+  "name": "admin.settings.locales.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/settings/locales/edit",
+  "name": "admin.settings.locales.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/locales/edit/{id}",
+  "name": "admin.settings.locales.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/settings/locales/edit/{id}",
+  "name": "admin.settings.locales.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/settings/locales/mass-delete",
+  "name": "admin.settings.locales.mass_delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/settings/locales/mass-edit",
+  "name": "admin.settings.locales.mass_update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/roles",
+  "name": "admin.settings.roles.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/roles/create",
+  "name": "admin.settings.roles.create",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/settings/roles/create",
+  "name": "admin.settings.roles.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/roles/edit/{id}",
+  "name": "admin.settings.roles.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/settings/roles/edit/{id}",
+  "name": "admin.settings.roles.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/settings/roles/edit/{id}",
+  "name": "admin.settings.roles.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/users",
+  "name": "admin.settings.users.index",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/settings/users/confirm",
+  "name": "admin.settings.users.destroy",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/settings/users/create",
+  "name": "admin.settings.users.store",
+  "public": false
+ },
+ {
+  "methods": [
+   "PUT"
+  ],
+  "uri": "admin/settings/users/edit",
+  "name": "admin.settings.users.update",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/settings/users/edit/{id}",
+  "name": "admin.settings.users.edit",
+  "public": false
+ },
+ {
+  "methods": [
+   "DELETE"
+  ],
+  "uri": "admin/settings/users/edit/{id}",
+  "name": "admin.settings.users.delete",
+  "public": false
+ },
+ {
+  "methods": [
+   "POST"
+  ],
+  "uri": "admin/tinymce/upload",
+  "name": "admin.tinymce.upload",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/viewed-notifications/{id}",
+  "name": "admin.notification.viewed_notification",
+  "public": false
+ },
+ {
+  "methods": [
+   "GET"
+  ],
+  "uri": "admin/vue-js-select/select-options",
+  "name": "admin.vue_js_select.select.options",
+  "public": false
+ }
+]
