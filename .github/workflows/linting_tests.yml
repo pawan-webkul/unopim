@@ -4,7 +4,7 @@ name: Linting Tests
 # limited to the release lines and everything else arrives through the PR event.
 on:
   push:
-    branches: [master, '3.x']
+    branches: [master, '3.x', playwright]
   pull_request:
   merge_group:
 

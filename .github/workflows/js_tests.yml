@@ -2,7 +2,7 @@ name: JavaScript Tests
 
 on:
   push:
-    branches: [master, '3.x']
+    branches: [master, '3.x', playwright]
   pull_request:
 
 concurrency:

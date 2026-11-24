@@ -10,7 +10,7 @@ name: Playwright Tests
 # limited to the release lines and everything else arrives through the PR event.
 on:
   push:
-    branches: [master, '3.x']
+    branches: [master, '3.x', playwright]
   pull_request:
   merge_group:
   schedule:
@@ -32,7 +32,7 @@ env:
 
 jobs:
   playwright_tests:
-    if: github.repository == 'unopim/unopim' && github.event_name != 'pull_request'
+    if: contains(fromJSON('["unopim/unopim","pawan-webkul/unopim"]'), github.repository) && github.event_name != 'pull_request'
     name: Playwright E2E | Shard ${{ matrix.shard-index }}/${{ matrix.shard-total }}
     runs-on: ubuntu-24.04
 
@@ -127,7 +127,7 @@ jobs:
   # A short pass over the admin flows every change can break: sign-in, ajax
   # navigation, the shared ajax form save and the catalog create/edit pages.
   playwright_smoke:
-    if: github.repository == 'unopim/unopim' && github.event_name == 'pull_request'
+    if: contains(fromJSON('["unopim/unopim","pawan-webkul/unopim"]'), github.repository) && github.event_name == 'pull_request'
     name: Playwright E2E | Smoke
     runs-on: ubuntu-24.04
 
@@ -189,7 +189,7 @@ jobs:
   # never satisfy a required check. This stand-in reports the expanded names on
   # a pull request so it can enter the merge queue, where the real job runs.
   playwright_tests_pull_request:
-    if: github.repository == 'unopim/unopim' && github.event_name == 'pull_request'
+    if: contains(fromJSON('["unopim/unopim","pawan-webkul/unopim"]'), github.repository) && github.event_name == 'pull_request'
     runs-on: ubuntu-24.04
     name: Playwright E2E | Shard ${{ matrix.shard-index }}/${{ matrix.shard-total }}
     strategy:
